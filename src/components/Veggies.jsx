@@ -30,7 +30,7 @@ const Veggies = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Vegetarian Recipes</h3>
+        <h3>Recetas Vegetarianas</h3>
         <Splide
           options={{
             perPage: 3,

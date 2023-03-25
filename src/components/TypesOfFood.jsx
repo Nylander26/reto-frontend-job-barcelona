@@ -8,11 +8,11 @@ const TypesOfFood = () => {
       <List>
         <StyledNavLink to={'/cuisine/Italian'}>
           <FaPizzaSlice />
-          <h4>Italian</h4>
+          <h4>Italiana</h4>
         </StyledNavLink>
         <StyledNavLink to={'/cuisine/American'}>
           <FaHamburger />
-          <h4>American</h4>
+          <h4>Americana</h4>
         </StyledNavLink>
         <StyledNavLink to={'/cuisine/Thai'}> 
           <GiNoodles />
@@ -20,7 +20,7 @@ const TypesOfFood = () => {
         </StyledNavLink>
         <StyledNavLink to={'/cuisine/Japanese'}>
           <GiChopsticks />
-          <h4>Japanese</h4>
+          <h4>Japonesa</h4>
         </StyledNavLink>
       </List>
   );
@@ -29,7 +29,7 @@ const TypesOfFood = () => {
 const List = styled.div`
   display: flex;
   justify-content: center;
-  margin: 2rem 0rem;
+  margin: 2em 0rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -38,17 +38,18 @@ const StyledNavLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-right: 2rem;
+  margin-right: 1em;
   text-decoration: none;
   background: linear-gradient(35deg, #494949, #313131);
   width: 6rem;
   height: 6rem;
   cursor: pointer;
-  transform: scale(.8);
+  transform: scale(0.8);
 
   h4 {
     color: white;
     font-size: .8rem;
+    margin-top: .5em
   }
 
   svg{

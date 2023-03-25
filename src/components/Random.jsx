@@ -23,14 +23,26 @@ const Random = () => {
       const json = await fetchingAPI.json();
       localStorage.setItem("random", JSON.stringify(json.recipes));
       setData(json.recipes);
+      console.log("hola");
     }
   };
 
-  console.log(data);
+  const changeRandomRecipes = async () => {
+    const fetchAPIAgain = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+    );
+    const json = await fetchAPIAgain.json();
+    localStorage.setItem('random', JSON.stringify(json.recipes));
+    setData(json.recipes);
+  } 
+
   return (
     <div>
       <Wrapper>
-        <h3>Random Recipes</h3>
+        <Title>
+          <h3>Recetas Random</h3>
+          <Button onClick={() => changeRandomRecipes()}>Nuevas Recetas</Button>
+        </Title>
         <Splide
           options={{
             perPage: 3,
@@ -60,6 +72,23 @@ const Random = () => {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+`;
+
+const Title = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Button = styled.button`
+  background: no-repeat;
+  border: none;
+  border-radius: 20%;
+  font-size: 1rem;
+  color: rgb(56, 56, 56);
+  line-height: 2.5rem;
+  margin: 2rem 0rem;
+  cursor: pointer;
+  font-weight: bold;
 `;
 
 const Card = styled.div`
