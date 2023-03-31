@@ -8,7 +8,7 @@ const TopBar = () => {
     <>
       <Nav>
         <div>
-          <Logo>
+          <Logo to={'/'}>
             <GiKnifeFork to={"/"} />
           </Logo>
           <Logo to={"/"}>FoodieU</Logo>
@@ -33,6 +33,12 @@ const Nav = styled.div`
   align-items: center;
   svg {
     font-size: 2em;
+  }
+
+  @media (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
   }
 `;
 

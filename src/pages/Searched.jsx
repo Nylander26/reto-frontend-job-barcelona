@@ -38,6 +38,11 @@ const Searched = () => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
+
+  @media (max-width: 420px) { 
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 5em;
+  }
 `;
 
 const Card = styled.div`

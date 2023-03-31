@@ -1,23 +1,28 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate('/searched/' + data)
+    navigate("/searched/" + data);
     setData("");
-  }
+  };
 
   return (
     <StyledForm onSubmit={submitHandler}>
       <div>
         <FaSearch></FaSearch>
-        <input onChange={(e) => setData(e.target.value)} type="text" value={data} placeholder="Busca tu receta..."/>
+        <input
+          onChange={(e) => setData(e.target.value)}
+          type="text"
+          value={data}
+          placeholder="Busca por ingrediente..."
+        />
       </div>
     </StyledForm>
   );
@@ -50,7 +55,29 @@ const StyledForm = styled.form`
     right: 10%;
     transform: translate(100%, -50%);
     color: white;
-    font-size: 1.2em
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 768px) {
+    svg {
+      right: 15%;
+      font-size: 1em !important;
+    }
+
+    input::placeholder {
+      color: transparent;
+    }
+  }
+
+  @media (max-width: 420px) {
+    svg {
+      right: 20%;
+    }
+
+    input {
+      padding: 1em;
+      font-size: 1em;
+    }
   }
 `;
 

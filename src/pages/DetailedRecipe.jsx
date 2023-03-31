@@ -46,9 +46,6 @@ const DetailedRecipe = () => {
             <h3>
               <p dangerouslySetInnerHTML={{ __html: detailedRecipe.instructions }}></p>
             </h3>
-            {/* <h3
-              dangerouslySetInnerHTML={{ __html: detailedRecipe.summary }}
-            ></h3> */}
           </div>
         )}
         {active === "ingredients" && (
@@ -90,11 +87,21 @@ const DetailDiv = styled.div`
     border-radius: 1rem;
     width: 20em;
   }
+
+  @media (max-width: 420px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 5em;
+  }
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
   max-height: 3rem;
+
+  @media (max-width: 420px) {
+    margin-top: 3em;
+  }
 `;
 
 const Button = styled.button`
@@ -108,6 +115,10 @@ const Button = styled.button`
 
 const Info = styled.div`
   margin-left: 5rem;
+
+  @media (max-width: 420px) {
+    margin-left: 0;
+  }
 `;
 
 export default DetailedRecipe;

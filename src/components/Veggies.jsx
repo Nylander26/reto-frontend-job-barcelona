@@ -31,16 +31,18 @@ const Veggies = () => {
       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
     );
     const json = await fetchAPIAgain.json();
-    localStorage.setItem('random', JSON.stringify(json.recipes));
+    localStorage.setItem("random", JSON.stringify(json.recipes));
     setData(json.recipes);
-  } 
+  };
 
   return (
     <div>
       <Wrapper>
-      <Title>
-          <h3>Recetas al Azar</h3>
-          <Button onClick={() => changeVegetarianRecipes()}>Nuevas Recetas</Button>
+        <Title>
+          <h3>Recetas Veganas Aleatorias</h3>
+          <Button onClick={() => changeVegetarianRecipes()}>
+            Nuevas Recetas
+          </Button>
         </Title>
         <Splide
           options={{
@@ -48,6 +50,21 @@ const Veggies = () => {
             arrows: true,
             pagination: false,
             gap: "5rem",
+            rewind: true,
+            breakpoints: {
+              1024: {
+                perPage: 3,
+               
+              },
+              768: {
+                perPage: 2,
+            
+              },
+              640: {
+                perPage: 1,
+          
+              },
+            },
           }}
         >
           {data.map((recipe) => {
@@ -79,7 +96,7 @@ const Title = styled.div`
 `;
 
 const Button = styled.button`
-  background: linear-gradient(35deg, #494949, #313131);;
+  background: linear-gradient(35deg, #494949, #313131);
   border: none;
   border-radius: 20%;
   font-size: 1rem;
@@ -87,7 +104,12 @@ const Button = styled.button`
   line-height: 2.5rem;
   margin: 2rem 0rem;
   cursor: pointer;
-  padding: .5em;
+  padding: 0.5em;
+
+  :hover {
+    background: linear-gradient(to right, #f27121, #e94057);
+    color: white;
+  }
 `;
 
 const Card = styled.div`

@@ -30,6 +30,11 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 2em 0rem;
+
+  @media (max-width: 420px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`

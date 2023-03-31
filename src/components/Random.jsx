@@ -48,6 +48,21 @@ const Random = () => {
             arrows: true,
             pagination: false,
             gap: "5rem",
+            rewind: true,
+            breakpoints: {
+              1024: {
+                perPage: 3,
+               
+              },
+              768: {
+                perPage: 2,
+            
+              },
+              640: {
+                perPage: 1,
+          
+              },
+            },
           }}
         >
           {data.map((recipe) => {
@@ -88,6 +103,11 @@ const Button = styled.button`
   margin: 2rem 0rem;
   cursor: pointer;
   padding: .5em;
+
+  :hover {
+    background: linear-gradient(to right, #f27121, #e94057);
+    color: white;
+  }
 `;
 
 const Card = styled.div`
