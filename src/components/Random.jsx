@@ -23,7 +23,6 @@ const Random = () => {
       const json = await fetchingAPI.json();
       localStorage.setItem("random", JSON.stringify(json.recipes));
       setData(json.recipes);
-      console.log("hola");
     }
   };
 
@@ -40,7 +39,7 @@ const Random = () => {
     <div>
       <Wrapper>
         <Title>
-          <h3>Recetas Random</h3>
+          <h3>Recetas al Azar</h3>
           <Button onClick={() => changeRandomRecipes()}>Nuevas Recetas</Button>
         </Title>
         <Splide
@@ -80,15 +79,15 @@ const Title = styled.div`
 `;
 
 const Button = styled.button`
-  background: no-repeat;
+  background: linear-gradient(35deg, #494949, #313131);;
   border: none;
   border-radius: 20%;
   font-size: 1rem;
-  color: rgb(56, 56, 56);
+  color: white;
   line-height: 2.5rem;
   margin: 2rem 0rem;
   cursor: pointer;
-  font-weight: bold;
+  padding: .5em;
 `;
 
 const Card = styled.div`

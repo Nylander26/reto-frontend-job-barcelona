@@ -1,28 +1,28 @@
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 const TypesOfFood = () => {
   return (
-      <List>
-        <StyledNavLink to={'/cuisine/Italian'}>
-          <FaPizzaSlice />
-          <h4>Italiana</h4>
-        </StyledNavLink>
-        <StyledNavLink to={'/cuisine/American'}>
-          <FaHamburger />
-          <h4>Americana</h4>
-        </StyledNavLink>
-        <StyledNavLink to={'/cuisine/Thai'}> 
-          <GiNoodles />
-          <h4>Thai</h4>
-        </StyledNavLink>
-        <StyledNavLink to={'/cuisine/Japanese'}>
-          <GiChopsticks />
-          <h4>Japonesa</h4>
-        </StyledNavLink>
-      </List>
+    <List>
+      <StyledNavLink to={"/cuisine/Italian"}>
+        <FaPizzaSlice />
+        <h4>Italiana</h4>
+      </StyledNavLink>
+      <StyledNavLink to={"/cuisine/American"}>
+        <FaHamburger />
+        <h4>Americana</h4>
+      </StyledNavLink>
+      <StyledNavLink to={"/cuisine/Thai"}>
+        <GiNoodles />
+        <h4>Thai</h4>
+      </StyledNavLink>
+      <StyledNavLink to={"/cuisine/Japanese"}>
+        <GiChopsticks />
+        <h4>Japonesa</h4>
+      </StyledNavLink>
+    </List>
   );
 };
 
@@ -48,11 +48,11 @@ const StyledNavLink = styled(NavLink)`
 
   h4 {
     color: white;
-    font-size: .8rem;
-    margin-top: .5em
+    font-size: 0.8rem;
+    margin-top: 0.5em;
   }
 
-  svg{
+  svg {
     color: white;
     font-size: 1.5rem;
   }
@@ -68,6 +68,6 @@ const StyledNavLink = styled(NavLink)`
       color: white;
     }
   }
-`
+`;
 
 export default TypesOfFood;
