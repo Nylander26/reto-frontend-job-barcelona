@@ -71,7 +71,7 @@ const Random = () => {
                 <Card>
                   <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
-                    <img src={recipe.image} alt={recipe.title} />
+                    <img src={!recipe.image ? './logofoodie.png' : recipe.image} alt={recipe.title} />
                     <Gradient />
                   </Link>
                 </Card>

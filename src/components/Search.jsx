@@ -55,7 +55,7 @@ const StyledForm = styled.form`
     right: 10%;
     transform: translate(100%, -50%);
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   @media (max-width: 768px) {
