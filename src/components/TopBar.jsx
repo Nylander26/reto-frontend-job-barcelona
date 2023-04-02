@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
+import styled from "styled-components";
 import Search from "./Search";
 
 const TopBar = () => {

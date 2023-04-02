@@ -1,8 +1,8 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
-import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 const Veggies = () => {
   const [data, setData] = useState([]);
@@ -18,7 +18,7 @@ const Veggies = () => {
       setData(JSON.parse(checkLocalStorage));
     } else {
       const fetchVeggies = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&tags=vegetarian&number=9`
       );
       const json = await fetchVeggies.json();
       localStorage.setItem("veggetarian", JSON.stringify(json.recipes));

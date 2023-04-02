@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Nombre del Proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FoodieU, es una app que busca y muestra diferentes recetas ya sean al azar o filtradas por busqueda de ingredientes.
 
-## Available Scripts
+# Descripcion
 
-In the project directory, you can run:
+Este proyecto realizado con la libreria de React implementa una busqueda mediante una API que muestra informacion de recetas y como prepararlas.
 
-### `npm start`
+Mediante una API se realizan busquedas constantes ya sea de recetas en si o busquedas por ingredientes mediante un filtro de busqueda aplicado, muestra tipos de alimentos varios, y de distintas culturas tambien.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Uso e Instalacion
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```javascript
+# 'npm install'
+Instalara todas las dependencias del proyecto.
 
-### `npm test`
+# 'npm start' 
+Compilara el proyecto y mostrara el mismo en localhost.
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# API ENDPOINTS
 
-### `npm run build`
+### GET /Searched/
+Busca las recetas y las muestra dependiendo del parametro de busqueda.
+```javascript
+# GET `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&query="meat"`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Response
+{
+    id: 651326,
+    image: "https://spoonacular.com/recipeImages/651326-312x231.jpg",
+    imageType: "jpg",
+    title: "Meat rolls with prosciutto and sage"
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### GET /Random/
+Busca recetas al azar y muestra un total de 9 recetas (Va a depender del parametro "number").
+```javascript
+# GET `https://api.spoonacular.com/recipes/random?apiKey=${APIKEY}&number=9`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Response "https://spoonacular.com/food-api/docs#Get-Recipe-Information"
+```
 
-### `npm run eject`
+### GET /Veggies/
+Busca y muestra solo recetas veganas.
+```javascript
+# GET `https://api.spoonacular.com/recipes/random?apiKey=${APIKEY}&tags=vegetarian`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Response "https://spoonacular.com/food-api/docs#Get-Recipe-Information"
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### GET /Cuisine/
+Busca y muestra distintos tipos de cocina, va a depender del parametro "cuisine".
+```javascript
+# GET `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&cuisine="italian"`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Response
+{
+    id: 634481,
+    image: "https://spoonacular.com/recipeImages/634481-312x231.jpg",
+    imageType: "jpg",
+    title: "Bbq Chicken and Goat Cheese Ravioli"
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### GET /DetailedRecipe/
+Busca y muestra la receta detallada, mostrando ingredientes y proceso de preparacion.
+```javascript
+# GET `https://api.spoonacular.com/recipes/{Id}/information?apiKey=${APIKEY}`
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Response `https://spoonacular.com/food-api/docs#Get-Recipe-Information`
+```

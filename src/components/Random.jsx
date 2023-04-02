@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 const Random = () => {
   const [data, setData] = useState([]);
