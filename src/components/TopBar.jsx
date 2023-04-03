@@ -9,9 +9,9 @@ const TopBar = () => {
       <Nav>
         <div>
           <Logo to={'/'}>
-            <GiKnifeFork to={"/"} />
+            <GiKnifeFork to={"/reto-frontend-job-barcelona"} />
           </Logo>
-          <Logo to={"/"}>FoodieU</Logo>
+          <Logo to={"/reto-frontend-job-barcelona"}>FoodieU</Logo>
         </div>
         <Search />
       </Nav>
