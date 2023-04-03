@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/reto-frontend-job-barcelona/static/css/main.56922f34.css",
-    "main.js": "/reto-frontend-job-barcelona/static/js/main.7162c7eb.js",
+    "main.js": "/reto-frontend-job-barcelona/static/js/main.279ad736.js",
     "index.html": "/reto-frontend-job-barcelona/index.html",
     "main.56922f34.css.map": "/reto-frontend-job-barcelona/static/css/main.56922f34.css.map",
-    "main.7162c7eb.js.map": "/reto-frontend-job-barcelona/static/js/main.7162c7eb.js.map"
+    "main.279ad736.js.map": "/reto-frontend-job-barcelona/static/js/main.279ad736.js.map"
   },
   "entrypoints": [
     "static/css/main.56922f34.css",
-    "static/js/main.7162c7eb.js"
+    "static/js/main.279ad736.js"
   ]
 }
