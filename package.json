@@ -1,7 +1,7 @@
 {
   "name": "reto-frontend",
   "version": "0.1.0",
-  "home": "https://nylander26.github.io/reto-frontend-job-barcelona",
+  "homepage": "https://nylander26.github.io/reto-frontend-job-barcelona",
   "private": true,
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
