@@ -55,13 +55,13 @@ const StyledForm = styled.form`
     right: 10%;
     transform: translate(100%, -50%);
     color: white;
-    font-size: 1em;
+    font-size: 1em !important;
   }
 
   @media (max-width: 768px) {
     svg {
       right: 15%;
-      font-size: 1em !important;
+      font-size: 1em;
     }
 
     input::placeholder {
@@ -69,7 +69,7 @@ const StyledForm = styled.form`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     svg {
       right: 20%;
     }
@@ -77,6 +77,11 @@ const StyledForm = styled.form`
     input {
       padding: 1em;
       font-size: 1em;
+    }
+
+    div {
+      width: 160%;
+      left: -3em;
     }
   }
 `;

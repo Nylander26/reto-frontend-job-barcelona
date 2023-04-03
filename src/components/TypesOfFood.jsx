@@ -31,9 +31,10 @@ const List = styled.div`
   justify-content: center;
   margin: 2em 0rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
 `;
 

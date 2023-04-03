@@ -87,7 +87,7 @@ const Veggies = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 4rem 0rem;
+  margin: 4em 0em;
 `;
 
 const Title = styled.div`
@@ -99,10 +99,10 @@ const Button = styled.button`
   background: linear-gradient(35deg, #494949, #313131);
   border: none;
   border-radius: 20%;
-  font-size: 1rem;
+  font-size: 1em;
   color: white;
-  line-height: 2.5rem;
-  margin: 2rem 0rem;
+  line-height: 1.5em;
+  margin: 2em 0em;
   cursor: pointer;
   padding: 0.5em;
 
@@ -113,13 +113,13 @@ const Button = styled.button`
 `;
 
 const Card = styled.div`
-  min-height: 12rem;
-  border-radius: 2rem;
+  min-height: 12em;
+  border-radius: 2em;
   overflow: hidden;
   position: relative;
 
   img {
-    border-radius: 2rem;
+    border-radius: 2em;
     position: absolute;
     left: 0;
     width: 100%;
@@ -137,7 +137,7 @@ const Card = styled.div`
     width: 100%;
     text-align: center;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     height: 40%;
     display: flex;
     justify-content: center;

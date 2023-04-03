@@ -44,7 +44,11 @@ const DetailedRecipe = () => {
         {active === "instructions" && (
           <div>
             <h3>
-              <p dangerouslySetInnerHTML={{ __html: detailedRecipe.instructions }}></p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: detailedRecipe.instructions,
+                }}
+              ></p>
             </h3>
           </div>
         )}
@@ -61,8 +65,8 @@ const DetailedRecipe = () => {
 };
 
 const DetailDiv = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 10em;
+  margin-bottom: 5em;
   display: flex;
 
   .active {
@@ -71,33 +75,44 @@ const DetailDiv = styled.div`
   }
 
   h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   li {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
+    font-size: 1.2em;
+    line-height: 2.5em;
   }
 
   ul {
-    margin-top: 2rem;
+    margin-top: 2em;
   }
 
   img {
-    border-radius: 1rem;
+    border-radius: 1em;
     width: 20em;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     display: grid;
-    grid-template-columns: 1fr;
+    place-content: center;
+    gap: 4em;
     margin-top: 5em;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      width: 200%;
+      line-height: 1.6em;
+    }
   }
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
-  max-height: 3rem;
+  max-height: 3em;
 
   @media (max-width: 420px) {
     margin-top: 3em;
@@ -105,18 +120,19 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   color: #313131;
   background: white;
   border: 2px solid black;
-  margin-right: 2rem;
+  margin-right: 2em;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 const Info = styled.div`
-  margin-left: 5rem;
+  margin-left: 5em;
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     margin-left: 0;
   }
 `;
