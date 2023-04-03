@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/nylander26/reto-frontend-job-barcelona/badge)](https://www.codefactor.io/repository/github/nylander26/reto-frontend-job-barcelona)
+
 # Nombre del Proyecto
 
 FoodieU, es una app que busca y muestra diferentes recetas ya sean al azar o filtradas por busqueda de ingredientes.
